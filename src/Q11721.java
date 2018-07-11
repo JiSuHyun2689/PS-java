@@ -17,7 +17,5 @@ public class Q11721 {
 
 		} catch (Exception e) {
 		}
-
 	}
-
 }
