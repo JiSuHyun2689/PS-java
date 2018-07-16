@@ -59,7 +59,6 @@ public class Q1406 {
 			for (String str : stack) {
 				output.append(str);
 			}
-
 			System.out.println(output);
 		} catch (Exception e) {
 			e.printStackTrace();

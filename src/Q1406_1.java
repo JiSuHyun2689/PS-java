@@ -71,6 +71,7 @@ public class Q1406_1 {
 		}
 		cursor++;
 	}
+
 	
 	public void B() {
 		if(cursor == -1 || cursor == 0) {
