@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-public class Q1406 {
+public class Q1406_F2 {
 
 	public static void main(String[] args) {
 

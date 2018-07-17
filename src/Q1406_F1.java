@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.Stack;
 import java.util.regex.Pattern;
 
-public class Q1406_1 {
+public class Q1406_F1 {
 
 	static List<String> list;
 	static int cursor;
@@ -33,7 +33,7 @@ public class Q1406_1 {
 			return;
 
 		try {
-			Class clz = Q1406_1.class;
+			Class clz = Q1406_F1.class;
 
 			Object obj = clz.newInstance();
 
