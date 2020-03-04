@@ -7,35 +7,39 @@ public class Q1193 {
 
 	public static void main(String[] args) {
 
-		
-		try(BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-			
+		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+
 			int num = Integer.parseInt(br.readLine());
-			int depth = 0;
-			int numerator, denominator = 0;
-			
-			
-			for(int i=1; ; i++) {
+			int depth = 0, numerator = 0, denominator = 0;
+
+			for (int i = 1;; i++) {
 				num -= i;
-				
-				if(num < 0) {
+
+				if (num <= 0) {
 					depth = i;
 					break;
 				}
 			}
-			
-			if(depth % 2 == 0) {
-				
-				numerator = 1;
-				denominator = depth;
-				
-				
-			}else {
-				
+
+			if (depth % 2 == 0) {
+				denominator = depth + 1;
+
+				for (int i = 1; i <= num + depth; i++, denominator--)
+					numerator = i;
+
+			} else {
+				numerator = depth + 1;
+
+				for (int i = 1; i <= num + depth; i++, numerator--) {
+					denominator = i;
+				}
+
 			}
-			
-			
-		}catch (Exception e) {
+
+			System.out.println(numerator + "/" + denominator);
+
+			br.close();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
