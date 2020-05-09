@@ -46,14 +46,35 @@ public class L1_FailureRate {
 	}
 
 	static class Rate {
-		int idx;
-		double failureRate;
+		private int idx;
+		private double failureRate;
 
 		public Rate(int idx, double failureRate) {
 			this.idx = idx;
 			this.failureRate = failureRate;
 		}
 
+		public int getIdx() {
+			return idx;
+		}
+
+		public void setIdx(int idx) {
+			this.idx = idx;
+		}
+
+		public double getFailureRate() {
+			return failureRate;
+		}
+
+		public void setFailureRate(double failureRate) {
+			this.failureRate = failureRate;
+		}
+
+		@Override
+		public String toString() {
+			// TODO Auto-generated method stub
+			return super.toString();
+		}
 	}
 
 	public static void main(String[] args) {
