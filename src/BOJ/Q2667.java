@@ -41,7 +41,7 @@ public class Q2667 {
 				String[] tmp = br.readLine().split("");
 				for (int j = 0; j < n; j++) {
 					adj[i][j] = Integer.parseInt(tmp[j]);
-				}
+				}                 
 			}
 
 			for (int i = 0; i < n; i++) {
