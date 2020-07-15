@@ -8,6 +8,9 @@ import java.util.LinkedList;
 
 public class Q1003 {
 
+	static int cntZero;
+	static int cntOne;
+
 	public static void main(String[] args) {
 
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -15,9 +18,8 @@ public class Q1003 {
 
 			int tc = Integer.parseInt(br.readLine());
 
-			for (int i = 0; i < tc; i++) {
+			for (int i = 0; i < tc; i++)
 				foundFibonacci(Integer.parseInt(br.readLine()), bw);
-			}
 
 			bw.close();
 
@@ -28,18 +30,12 @@ public class Q1003 {
 
 	private static void foundFibonacci(int n, BufferedWriter bw) throws Exception {
 		
-		bw.write(String.valueOf(fibonacci(n, bw)));
-
+		
+		
+		
+		bw.write("\n");
+		cntZero = cntOne = 0;
 	}
 
-	static int fibonacci(int n, BufferedWriter bw) throws Exception {
-		if (n == 0) {
-			return 0;
-		} else if (n == 1) {
-			return 1;
-		} else {
-			return fibonacci(n - 1, bw) + fibonacci(n - 2, bw);
-		}
-	}
-
+	
 }
