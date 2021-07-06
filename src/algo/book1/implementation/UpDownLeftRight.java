@@ -13,40 +13,33 @@ public class UpDownLeftRight {
 		String[] moving = str.split(" ");
 		Xy xy = new Xy(1, 1);
 
-		for (int i = 0; i < moving.length; i++) {
+		for (int i = 0; i < moving.length; i++)
 			xy = move(xy, moving[i]);
-		}
-
-		// start (1,1)
 
 		return xy.toString();
 	}
 
 	public static Xy move(Xy currentXy, String move) {
 		Xy xy = udlr.get(move);
-		int currentX = currentXy.x;
-		int currentY = currentXy.y;
-		int x = xy.x;
-		int y = xy.y;
-		
-		System.out.println("current = " + currentXy.toString() + ", x = " + x + ", y = " + y +", move = " + move);
 
-		if (currentX + x <= 0 || currentX + x >= n || currentY + y <= 0 || currentX + y >= n) {
-			System.out.println("Pass current = " + currentXy.toString() + ", x = " + x + ", y = " + y +", move = " + move);
+		if (currentXy.x + xy.x <= 0 || currentXy.x + xy.x >= n || currentXy.y + xy.y <= 0 || currentXy.y + xy.y >= n) {
+			System.out.println(
+					"Pass current = " + currentXy.toString() + ", x = " + xy.x + ", y = " + xy.y + ", move = " + move);
 			return currentXy;
 		}
 
-		currentX += x;
-		currentY += y;
+		currentXy.x += xy.x;
+		currentXy.y += xy.y;
+		System.out
+				.println("current = " + currentXy.toString() + ", x = " + xy.x + ", y = " + xy.y + ", move = " + move);
 
 		return currentXy;
-
 	}
 
 	public static void initUdlr() {
-		udlr.put("U", new Xy(0, -1));
+		udlr.put("U", new Xy(-1, 0));
 		udlr.put("D", new Xy(1, 0));
-		udlr.put("L", new Xy(-1, 0));
+		udlr.put("L", new Xy(0, -1));
 		udlr.put("R", new Xy(0, 1));
 	}
 
@@ -62,7 +55,7 @@ public class UpDownLeftRight {
 
 		@Override
 		public String toString() {
-			return "("+x+","+y+")";
+			return "(" + x + "," + y + ")";
 		}
 	}
 
