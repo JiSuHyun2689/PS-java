@@ -1,4 +1,4 @@
-package sort;
+package algo.book1.sort;
 
 import java.util.Arrays;
 import java.util.Collections;
